@@ -211,7 +211,7 @@ def clear():
 ##############################################################
 def main():
     parser = argparse.ArgumentParser(
-        description=f"{info} {bright}{yellow}Powerful Directory Scanner - A tool to scan directories efficiently{reset}",
+        description=f"\n{info} {bright}{yellow}Powerful Directory Scanner - A tool to scan directories efficiently{reset}",
         formatter_class=ColoredHelpFormatter
     )
 
@@ -268,7 +268,7 @@ def main():
 
     parser.add_argument(
         "--live", 
-        help=f"{bright}{yellow}Enable live mode to display valid URLs as they are found.{reset}", 
+        help=f"{bright}{yellow}Enable live mode to display valid URLs as they are found.{reset}\n", 
         action="store_true"
     )
 
