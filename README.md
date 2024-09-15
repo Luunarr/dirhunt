@@ -69,8 +69,8 @@ To perform a scan on `http://example.com` using a custom path list with 20 threa
 
 ## 👤 Author
 
-[Lunar](https://github.com/Luunarr/ccdir)
+**[Lunar](https://github.com/Luunarr/ccdir)**
 
 ## 📜 License
 
-This script is licensed under the [MIT License](LICENSE).
+**This script is licensed under the [MIT License](LICENSE).**
