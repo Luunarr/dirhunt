@@ -1,6 +1,6 @@
 # 📂 Directory Scanner
 
-A powerful tool to efficiently scan directories of a specified URL. This script allows you to identify directories and files by sending HTTP requests and checking responses.
+**A powerful tool to efficiently scan directories of a specified URL. This script allows you to identify directories and files by sending HTTP requests and checking responses.**
 
 ## 🔧 Features
 
@@ -65,7 +65,7 @@ To start a directory scan, run the script with the base URL:
 
 To perform a scan on `http://example.com` using a custom path list with 20 threads, log results to `results.log`, and display results in real-time, you can use:
 
-`python scanner.py http://example.com -p custom_paths.txt -t 20 --logfile results.log --live`
+`python ccdir.py http://example.com -p custom_paths.txt -t 20 --logfile results.log --live`
 
 ## 👤 Author
 
