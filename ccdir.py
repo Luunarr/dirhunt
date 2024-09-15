@@ -268,7 +268,7 @@ def main():
 
     parser.add_argument(
         "--live", 
-        help=f"{bright}{yellow}Enable live mode to display valid URLs as they are found.{reset}\n", 
+        help=f"{bright}{yellow}Enable live mode to display valid URLs as they are found.{reset}", 
         action="store_true"
     )
 
