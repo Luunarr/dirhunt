@@ -31,35 +31,35 @@ To start a directory scan, run the script with the base URL:
 
 - `-p`, `--paths` : Specify the path to a custom file containing a list of paths to test. Each path should be on a new line.
 
-  `python scanner.py http://example.com -p custom_paths.txt`
+  `python ccdir.py http://example.com -p custom_paths.txt`
 
 - `-t`, `--threads` : Set the number of threads to use for scanning. Default is `10`.
 
-  `python scanner.py http://example.com -t 20`
+  `python ccdir.py http://example.com -t 20`
 
 - `-m`, `--mode` : Choose the scan mode. Options: `default` (use the built-in path list) or `custom` (use a custom path list).
 
-  `python scanner.py http://example.com -m custom -p custom_paths.txt`
+  `python ccdir.py http://example.com -m custom -p custom_paths.txt`
 
 - `--clear` : Clear the screen before displaying the scan results.
 
-  `python scanner.py http://example.com --clear`
+  `python ccdir.py http://example.com --clear`
 
 - `--user-agent` : Specify a custom `User-Agent` header for requests.
 
-  `python scanner.py http://example.com --user-agent "CustomAgent/1.0"`
+  `python ccdir.py http://example.com --user-agent "CustomAgent/1.0"`
 
 - `--retries` : Set the number of retry attempts for failed requests. Default is `3`.
 
-  `python scanner.py http://example.com --retries 5`
+  `python ccdir.py http://example.com --retries 5`
 
 - `--logfile` : Specify a file to log the scan results. Default is `scan.log`.
 
-  `python scanner.py http://example.com --logfile myscan.log`
+  `python ccdir.py http://example.com --logfile myscan.log`
 
 - `--live` : Enable live mode to display valid URLs as they are found.
 
-  `python scanner.py http://example.com --live`
+  `python ccdir.py http://example.com --live`
 
 ## 💡 Example
 
