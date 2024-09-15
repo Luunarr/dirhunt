@@ -12,17 +12,7 @@ import os
 from colorama import *
 ##############################################################
 
-
-##############################################################
-def initcolorama(enable_color=True):
-    if enable_color:
-        init(autoreset=True)
-    else:
-        init(autoreset=False)
-        global Fore, Back, Style
-        Fore = Back = Style = None
-##############################################################
-
+init(autoreset=True)
 
 ##############################################################
 black = Fore.BLACK
@@ -47,6 +37,15 @@ inputt = f"{reset}{bright}{cyan}[{white}>{cyan}]{reset}"
 htag = f"{reset}{bright}{blue}[{white}#{blue}]{reset}"
 ##############################################################
 
+asciiart = [
+    f"{bright}{white}                     _      _           {reset}",
+    f"{bright}{white}   __      __     __| |    (_)      _ _ {reset}",
+    f"{bright}{white}  / _|    / _|   / _` |    | |     | '_|{reset}",
+    f"{bright}{white}  \__|_   \__|_  \__,_|   _|_|_   _|_|_ {reset}",
+    f'{bright}{white}_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|{reset}',
+    f"""{bright}{white}"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'{reset}""",
+    f""
+]
 
 ##############################################################
 defpaths = [
@@ -140,13 +139,15 @@ def slogging(logfile):
 
 ##############################################################
 def scan(url, paths, threads=10, color=True, user_agent=None, retries=3, live=False):
-    if not color:
-        initcolorama(enable_color=False)
 
     if user_agent:
         headers = {'User-Agent': user_agent}
     else:
         headers = {}
+
+    for line in asciiart:
+        print(line)
+        time.sleep(0.02)
 
     print(f"{resu} {bright}{white}Starting directory scan on URL: {url}{reset}")
     logging.info(f"Starting directory scan on URL: {url}")
@@ -211,7 +212,7 @@ def clear():
 ##############################################################
 def main():
     parser = argparse.ArgumentParser(
-        description=f"{info} {bright}{yellow}Powerful Directory Scanner - A tool to scan directories efficiently{reset}",
+        description=f"\n{info} {bright}{yellow}Powerful Directory Scanner - A tool to scan directories efficiently{reset}",
         formatter_class=ColoredHelpFormatter
     )
 
@@ -268,9 +269,11 @@ def main():
 
     parser.add_argument(
         "--live", 
-        help=f"{bright}{yellow}Enable live mode to display valid URLs as they are found.{reset}", 
+        help=f"{bright}{yellow}Enable live mode to display valid URLs as they are found.{reset}\n", 
         action="store_true"
     )
+
+    print(asciiart)
 
     args = parser.parse_args()
 
