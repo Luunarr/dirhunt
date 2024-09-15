@@ -1,5 +1,5 @@
 @echo off
-pip install -r "%~dp0requirements.txt"
+pip install -r "requirements.txt"
 set "directory=%~dp0"
 if "%directory:~-1%"=="\" set "directory=%directory:~0,-1%"
 set "PATH=%PATH%;%directory%"
