@@ -17,7 +17,7 @@ A powerful tool to efficiently scan directories of a specified URL. This script 
 
 You can install the required libraries using pip:
 
-`pip install requests tqdm colorama`
+`pip install -r requirements.txt`
 
 ## 🚀 Usage
 
