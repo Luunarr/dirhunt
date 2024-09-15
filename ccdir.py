@@ -211,7 +211,7 @@ def clear():
 ##############################################################
 def main():
     parser = argparse.ArgumentParser(
-        description=f"\n{info} {bright}{yellow}Powerful Directory Scanner - A tool to scan directories efficiently{reset}",
+        description=f"{info} {bright}{yellow}Powerful Directory Scanner - A tool to scan directories efficiently{reset}",
         formatter_class=ColoredHelpFormatter
     )
 
