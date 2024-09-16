@@ -7,6 +7,7 @@ from concurrent.futures import ThreadPoolExecutor
 import time
 import argparse
 import logging
+import socket
 from tqdm import tqdm
 import os
 from colorama import *
@@ -142,6 +143,17 @@ def slogging(logfile):
 ##############################################################
 def scan(url, paths, threads=10, color=True, user_agent=None, retries=3, live=False):
 
+    domain = url.split("//")[-1].split("/")[0]
+
+    try:
+        ip = socket.gethostbyname(domain)
+        print(f"{resu} {bright}{white}Domain: {domain} | IP Address: {ip}{reset}")
+    except socket.gaierror:
+        print(f"{excla} {bright}{red}Unable to resolve domain: {domain}{reset}")
+        ip = None
+
+    logging.info(f"Scanning domain: {domain} | IP Address: {ip}")
+
     if user_agent:
         headers = {'User-Agent': user_agent}
     else:
@@ -150,12 +162,20 @@ def scan(url, paths, threads=10, color=True, user_agent=None, retries=3, live=Fa
     print(f"{resu} {bright}{white}Starting directory scan on URL: {url}{reset}")
     logging.info(f"Starting directory scan on URL: {url}")
 
+    statuscounts = {}
+
     def cpath(path):
         fullurl = urljoin(url, path)
         attempt = 1
         while attempt <= retries:
             try:
                 response = requests.get(fullurl, headers=headers, timeout=10)
+                code = response.status_code
+                if code in statuscounts:
+                    statuscounts[code] += 1
+                else:
+                    statuscounts[code] = 1
+
                 if response.status_code == 200:
                     return (fullurl, response.status_code, response.elapsed.total_seconds())
             except requests.RequestException as e:
@@ -170,7 +190,7 @@ def scan(url, paths, threads=10, color=True, user_agent=None, retries=3, live=Fa
 
     with ThreadPoolExecutor(max_workers=threads) as executor:
         futures = {executor.submit(cpath, path): path for path in paths}
-        
+
         if live:
             print(f"\n{htag} {bright}{white}Discovered URLs:{reset}")
             for future in futures:
@@ -195,9 +215,14 @@ def scan(url, paths, threads=10, color=True, user_agent=None, retries=3, live=Fa
             print(f"{plus} {bright}{white}{result[0]} ")
             logging.info(f"Discovered URL: {result[0]}")
 
-    print(f"\n{info} {bright}{white}Scan completed in {ttime:.2f} seconds.{reset}")
-    print(f"{info} {bright}{white}URLs tested per second: {urlspersec:.2f}{reset}")
-    print(f"{info} {bright}{white}Total URLs found: {len(results)}{reset}\n")
+    print(f"\n{resu} {bright}{white}Scan completed in {ttime:.2f} seconds.{reset}")
+    print(f"{resu} {bright}{white}URLs tested per second: {urlspersec:.2f}{reset}")
+    print(f"{resu} {bright}{white}Total URLs found: {len(results)}{reset}\n")
+
+    print(f"{resu} {bright}{white}HTTP status codes summary:{reset}")
+    for code, count in sorted(statuscounts.items(), key=lambda item: item[1], reverse=True):
+        print(f"{inputt} {bright}{white}Status Code {code}: {count} times{reset}")
+    print()     
 ##############################################################
 
 
