@@ -35,11 +35,15 @@ python dirhunt.py http://example.com
 
 - `-p`, `--paths` : Specify the path to a custom file containing a list of paths to test. Each path should be on a new line.
 
-  `python dirhunt.py http://example.com -p custom_paths.txt`
+  ```bash
+  python dirhunt.py http://example.com -p custom_paths.txt
+  ```
 
 - `-t`, `--threads` : Set the number of threads to use for scanning. Default is `10`.
 
-  `python dirhunt.py http://example.com -t 20`
+  ```bash
+  python dirhunt.py http://example.com -t 20
+  ```
 
 - `-m`, `--mode` : Choose the scan mode. Options: `default` (use the built-in path list) or `custom` (use a custom path list).
 
