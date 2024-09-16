@@ -13,7 +13,11 @@ import os
 from colorama import *
 ##############################################################
 
+
+##############################################################
 init(autoreset=True)
+##############################################################
+
 
 ##############################################################
 black = Fore.BLACK
@@ -26,10 +30,10 @@ cyan = Fore.CYAN
 white = Fore.WHITE
 gray = Fore.LIGHTBLACK_EX
 lightyellow = Fore.LIGHTYELLOW_EX
-
+##############################################################
 reset = Style.RESET_ALL
 bright = Style.BRIGHT
-
+##############################################################
 resu = f"{reset}{bright}{lightyellow}[{white}*{lightyellow}]{reset}"
 tilde = f"{reset}{bright}{yellow}[{white}~{yellow}]{reset}"
 plus = f"{reset}{bright}{green}[{white}+{green}]{reset}"
