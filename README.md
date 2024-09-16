@@ -47,11 +47,15 @@ python dirhunt.py http://example.com
 
 - `-m`, `--mode` : Choose the scan mode. Options: `default` (use the built-in path list) or `custom` (use a custom path list).
 
-  `python dirhunt.py http://example.com -m custom -p custom_paths.txt`
+  ```bash
+  python dirhunt.py http://example.com -m custom -p custom_paths.txt
+  ```
 
 - `--clear` : Clear the screen before displaying the scan results.
 
-  `python dirhunt.py http://example.com --clear`
+  ```bash
+  python dirhunt.py http://example.com --clear
+  ```
 
 - `--user-agent` : Specify a custom `User-Agent` header for requests.
 
