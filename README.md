@@ -27,7 +27,9 @@ pip install -r requirements.txt
 
 To start a directory scan, run the script with the base URL:
 
-`python dirhunt.py http://example.com`
+```bash
+python dirhunt.py http://example.com
+```
 
 ### Options
 
