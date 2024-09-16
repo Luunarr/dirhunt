@@ -25,11 +25,12 @@ magenta = Fore.MAGENTA
 cyan = Fore.CYAN
 white = Fore.WHITE
 gray = Fore.LIGHTBLACK_EX
+lightyellow = Fore.LIGHTYELLOW_EX
 
 reset = Style.RESET_ALL
 bright = Style.BRIGHT
 
-resu = f"{reset}{bright}{yellow}[{white}*{yellow}]{reset}"
+resu = f"{reset}{bright}{lightyellow}[{white}*{lightyellow}]{reset}"
 tilde = f"{reset}{bright}{yellow}[{white}~{yellow}]{reset}"
 plus = f"{reset}{bright}{green}[{white}+{green}]{reset}"
 excla = f"{reset}{bright}{red}[{white}!{red}]{reset}"
@@ -295,7 +296,7 @@ def main():
 
     parser.add_argument(
         "--live", 
-        help=f"{bright}{yellow}Enable live mode to display valid URLs as they are found.{reset}\n", 
+        help=f"{bright}{yellow}Enable live mode to display valid URLs as they are found.{reset}", 
         action="store_true"
     )
 
