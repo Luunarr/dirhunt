@@ -1,4 +1,4 @@
-# 📂 Directory Scanner
+# 📂 Dirhunt
 
 **A powerful tool to efficiently scan directories of a specified URL. This script allows you to identify directories and files by sending HTTP requests and checking responses.**
 
@@ -25,51 +25,51 @@ You can install the required libraries using pip:
 
 To start a directory scan, run the script with the base URL:
 
-`python scanner.py http://example.com`
+`python dirhunt.py http://example.com`
 
 ### Options
 
 - `-p`, `--paths` : Specify the path to a custom file containing a list of paths to test. Each path should be on a new line.
 
-  `python ccdir.py http://example.com -p custom_paths.txt`
+  `python dirhunt.py http://example.com -p custom_paths.txt`
 
 - `-t`, `--threads` : Set the number of threads to use for scanning. Default is `10`.
 
-  `python ccdir.py http://example.com -t 20`
+  `python dirhunt.py http://example.com -t 20`
 
 - `-m`, `--mode` : Choose the scan mode. Options: `default` (use the built-in path list) or `custom` (use a custom path list).
 
-  `python ccdir.py http://example.com -m custom -p custom_paths.txt`
+  `python dirhunt.py http://example.com -m custom -p custom_paths.txt`
 
 - `--clear` : Clear the screen before displaying the scan results.
 
-  `python ccdir.py http://example.com --clear`
+  `python dirhunt.py http://example.com --clear`
 
 - `--user-agent` : Specify a custom `User-Agent` header for requests.
 
-  `python ccdir.py http://example.com --user-agent "CustomAgent/1.0"`
+  `python dirhunt.py http://example.com --user-agent "CustomAgent/1.0"`
 
 - `--retries` : Set the number of retry attempts for failed requests. Default is `3`.
 
-  `python ccdir.py http://example.com --retries 5`
+  `python dirhunt.py http://example.com --retries 5`
 
 - `--logfile` : Specify a file to log the scan results. Default is `scan.log`.
 
-  `python ccdir.py http://example.com --logfile myscan.log`
+  `python dirhunt.py http://example.com --logfile myscan.log`
 
 - `--live` : Enable live mode to display valid URLs as they are found.
 
-  `python ccdir.py http://example.com --live`
+  `python dirhunt.py http://example.com --live`
 
 ## 💡 Example
 
 To perform a scan on `http://example.com` using a custom path list with 20 threads, log results to `results.log`, and display results in real-time, you can use:
 
-`python ccdir.py http://example.com -p custom_paths.txt -t 20 --logfile results.log --live`
+`python dirhunt.py http://example.com -p custom_paths.txt -t 20 --logfile results.log --live`
 
 ## 👤 Author
 
-**[Lunar](https://github.com/Luunarr/ccdir)**
+**[Lunar](https://github.com/Luunarr/dirhunt)**
 
 ## 📜 License
 
