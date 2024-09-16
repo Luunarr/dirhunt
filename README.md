@@ -59,11 +59,15 @@ python dirhunt.py http://example.com
 
 - `--user-agent` : Specify a custom `User-Agent` header for requests.
 
-  `python dirhunt.py http://example.com --user-agent "CustomAgent/1.0"`
+  ```bash
+  python dirhunt.py http://example.com --user-agent "CustomAgent/1.0"
+  ```
 
 - `--retries` : Set the number of retry attempts for failed requests. Default is `3`.
 
-  `python dirhunt.py http://example.com --retries 5`
+  ```bash
+  python dirhunt.py http://example.com --retries 5
+  ```
 
 - `--logfile` : Specify a file to log the scan results. Default is `scan.log`.
 
