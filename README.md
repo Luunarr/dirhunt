@@ -74,3 +74,7 @@ To perform a scan on `http://example.com` using a custom path list with 20 threa
 ## 📜 License
 
 **This script is licensed under the [MIT License](LICENSE).**
+
+
+
+**[SecLists](https://github.com/danielmiessler/SecLists)**
