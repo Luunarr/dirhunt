@@ -16,8 +16,12 @@
 - Required libraries: `requests`, `tqdm`, `colorama`
 
 You can install the required libraries using pip:
-
-`pip install -r requirements.txt`
+```bash
+cd "setup + path"
+```
+```bash
+pip install -r requirements.txt
+```
 
 ## 🚀 Usage
 
