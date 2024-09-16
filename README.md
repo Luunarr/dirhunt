@@ -71,11 +71,15 @@ python dirhunt.py http://example.com
 
 - `--logfile` : Specify a file to log the scan results. Default is `scan.log`.
 
-  `python dirhunt.py http://example.com --logfile myscan.log`
+  ```bash
+  python dirhunt.py http://example.com --logfile myscan.log
+  ```
 
 - `--live` : Enable live mode to display valid URLs as they are found.
 
-  `python dirhunt.py http://example.com --live`
+  ```bash
+  python dirhunt.py http://example.com --live
+  ```
 
 ## 💡 Example
 
