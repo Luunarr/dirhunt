@@ -38,12 +38,12 @@ htag = f"{reset}{bright}{blue}[{white}#{blue}]{reset}"
 ##############################################################
 
 asciiart = [
-f"{bright}{white}   ___      _             _  _                     _    {reset}"
-f"{bright}{white}  |   \    (_)      _ _  | || |   _  _    _ _     | |_  {reset}"
-f"{bright}{white}  | |) |   | |     | '_| | __ |  | +| |  | ' \    |  _| {reset}"
-f"{bright}{white}  |___/   _|_|_   _|_|_  |_||_|   \_,_|  |_||_|   _\__| {reset}"
-f'{bright}{white}_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|{reset}'
-f"""{bright}{white}"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'{reset}"""
+f"{bright}{white}   ___      _             _  _                     _    {reset}",
+f"{bright}{white}  |   \    (_)      _ _  | || |   _  _    _ _     | |_  {reset}",
+f"{bright}{white}  | |) |   | |     | '_| | __ |  | +| |  | ' \    |  _| {reset}",
+f"{bright}{white}  |___/   _|_|_   _|_|_  |_||_|   \_,_|  |_||_|   _\__| {reset}",
+f'{bright}{white}_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|{reset}',
+f"""{bright}{white}"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'{reset}""",
 f""
 ]
 
@@ -131,7 +131,9 @@ class ColoredHelpFormatter(argparse.RawTextHelpFormatter):
 
 ##############################################################
 def slogging(logfile):
-    logging.basicConfig(filename=logfile, level=logging.INFO,
+    script = os.path.dirname(os.path.abspath(__file__))
+    logfilep = os.path.join(script, logfile)
+    logging.basicConfig(filename=logfilep, level=logging.INFO,
                         format='%(asctime)s - %(levelname)s - %(message)s')
     logging.info("Logging started")
 ##############################################################
@@ -144,10 +146,6 @@ def scan(url, paths, threads=10, color=True, user_agent=None, retries=3, live=Fa
         headers = {'User-Agent': user_agent}
     else:
         headers = {}
-
-    for line in asciiart:
-        print(line)
-        time.sleep(0.02)
 
     print(f"{resu} {bright}{white}Starting directory scan on URL: {url}{reset}")
     logging.info(f"Starting directory scan on URL: {url}")
@@ -199,13 +197,16 @@ def scan(url, paths, threads=10, color=True, user_agent=None, retries=3, live=Fa
 
     print(f"\n{info} {bright}{white}Scan completed in {ttime:.2f} seconds.{reset}")
     print(f"{info} {bright}{white}URLs tested per second: {urlspersec:.2f}{reset}")
-    print(f"{info} {bright}{white}Total URLs found: {len(results)}{reset}")
+    print(f"{info} {bright}{white}Total URLs found: {len(results)}{reset}\n")
 ##############################################################
 
 
 ##############################################################
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
+    for line in asciiart:
+        print(line)
+        time.sleep(0.02)
 ##############################################################
 
 
@@ -273,8 +274,10 @@ def main():
         action="store_true"
     )
 
-    print(asciiart)
-    
+    for line in asciiart:
+        print(line)
+        time.sleep(0.02)
+
     args = parser.parse_args()
 
     if args.clear:
