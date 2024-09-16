@@ -1,3 +1,7 @@
 @echo off
 pip install -r "requirements.txt"
-start dirhunt.py
+cls
+python dirhunt.py
+cls
+py dirhunt.py
+cls
