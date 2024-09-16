@@ -221,7 +221,7 @@ def scan(url, paths, threads=10, color=True, user_agent=None, retries=3, live=Fa
 
     print(f"{resu} {bright}{white}HTTP status codes summary:{reset}")
     for code, count in sorted(statuscounts.items(), key=lambda item: item[1], reverse=True):
-        print(f"{inputt} {bright}{white}Status Code {code}: {count} times{reset}")
+        print(f"{plus} {bright}{white}Status Code {code}: {count} times{reset}")
     print()     
 ##############################################################
 
