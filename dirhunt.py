@@ -273,6 +273,8 @@ def main():
         action="store_true"
     )
 
+    print(asciiart)
+    
     args = parser.parse_args()
 
     if args.clear:
