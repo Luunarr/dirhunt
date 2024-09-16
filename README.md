@@ -85,7 +85,9 @@ python dirhunt.py http://example.com
 
 To perform a scan on `http://example.com` using a custom path list with 20 threads, log results to `results.log`, and display results in real-time, you can use:
 
-`python dirhunt.py http://example.com -p custom_paths.txt -t 20 --logfile results.log --live`
+```bash
+python dirhunt.py http://example.com -p custom_paths.txt -t 20 --logfile results.log --live
+```
 
 ## 👤 Author
 
