@@ -20,6 +20,7 @@ init(autoreset=True)
 
 
 ##############################################################
+
 black = Fore.BLACK
 red = Fore.RED
 green = Fore.GREEN
@@ -30,10 +31,14 @@ cyan = Fore.CYAN
 white = Fore.WHITE
 gray = Fore.LIGHTBLACK_EX
 lightyellow = Fore.LIGHTYELLOW_EX
+
 ##############################################################
+
 reset = Style.RESET_ALL
 bright = Style.BRIGHT
+
 ##############################################################
+
 resu = f"{reset}{bright}{lightyellow}[{white}*{lightyellow}]{reset}"
 tilde = f"{reset}{bright}{yellow}[{white}~{yellow}]{reset}"
 plus = f"{reset}{bright}{green}[{white}+{green}]{reset}"
@@ -41,6 +46,7 @@ excla = f"{reset}{bright}{red}[{white}!{red}]{reset}"
 info = f"{reset}{bright}{cyan}[{white}?{cyan}]{reset}"
 inputt = f"{reset}{bright}{cyan}[{white}>{cyan}]{reset}"
 htag = f"{reset}{bright}{blue}[{white}#{blue}]{reset}"
+
 ##############################################################
 
 asciiart = [
@@ -226,8 +232,7 @@ def scan(url, paths, threads=10, color=True, user_agent=None, retries=3, live=Fa
 
     print(f"{resu} {bright}{white}HTTP status codes summary:{reset}")
     for code, count in sorted(statuscounts.items(), key=lambda item: item[1], reverse=True):
-        print(f"{plus} {bright}{white}Status Code {code}: {count} times{reset}")
-    print()     
+        print(f"{plus} {bright}{white}Status Code {code}: {count} times{reset}") 
 ##############################################################
 
 
