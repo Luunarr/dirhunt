@@ -50,6 +50,9 @@ git = f"{reset}{bright}{gray}[{white}github{gray}]{reset}"
 
 ##############################################################
 
+
+##############################################################
+
 asciiart = [
 f"{bright}{white}   ___      _             _  _                     _    {reset}",
 f"{bright}{white}  |   \    (_)      _ _  | || |   _  _    _ _     | |_  {reset}",
@@ -63,6 +66,10 @@ f""
 ]
 
 ##############################################################
+
+
+##############################################################
+
 defpaths = [
     'admin/', 'login/', 'dashboard/', 'config/', 'db/', 'backup/',
     'robots.txt', '.env', '.git/', 'wp-admin/', 'phpinfo.php', 'index.php',
@@ -126,10 +133,12 @@ defpaths = [
     'frontend/updates/', 'frontend/archives/', 'frontend/temp/',
     'uploads/archive/', 'uploads/cache/', 'uploads/data/', 'uploads/private/'
 ]
+
 ##############################################################
 
 
 ##############################################################
+
 class ColoredHelpFormatter(argparse.RawTextHelpFormatter):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -141,20 +150,24 @@ class ColoredHelpFormatter(argparse.RawTextHelpFormatter):
     def _format_action_invocation(self, action):
         parts = super()._format_action_invocation(action)
         return f"{gray}{parts}{reset}"
+        
 ##############################################################
 
 
 ##############################################################
+
 def slogging(logfile):
     script = os.path.dirname(os.path.abspath(__file__))
     logfilep = os.path.join(script, logfile)
     logging.basicConfig(filename=logfilep, level=logging.INFO,
                         format='%(asctime)s - %(levelname)s - %(message)s')
     logging.info("Logging started")
+    
 ##############################################################
 
 
 ##############################################################
+
 def scan(url, paths, threads=10, color=True, user_agent=None, retries=3, live=False):
 
     domain = url.split("//")[-1].split("/")[0]
@@ -237,19 +250,23 @@ def scan(url, paths, threads=10, color=True, user_agent=None, retries=3, live=Fa
     for code, count in sorted(statuscounts.items(), key=lambda item: item[1], reverse=True):
         print(f"{plus} {bright}{white}Status Code {code}: {count} times{reset}") 
     print()
+    
 ##############################################################
 
 
 ##############################################################
+
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
     for line in asciiart:
         print(line)
         time.sleep(0.02)
+        
 ##############################################################
 
 
 ##############################################################
+
 def main():
     parser = argparse.ArgumentParser(
         description=f"\n{info} {bright}{yellow}Powerful Directory Scanner - A tool to scan directories efficiently{reset}",
@@ -335,10 +352,13 @@ def main():
         paths = defpaths
 
     scan(args.url, paths, threads=args.threads, user_agent=args.user_agent, retries=args.retries, live=args.live)
+    
 ##############################################################
 
 
 ##############################################################
+
 if __name__ == "__main__":
     main()
+    
 ##############################################################
