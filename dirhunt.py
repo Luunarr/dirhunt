@@ -37,6 +37,8 @@ lightyellow = Fore.LIGHTYELLOW_EX
 reset = Style.RESET_ALL
 bright = Style.BRIGHT
 
+w = f"{bright}{white}Press Enter to continue...{reset}"
+
 ##############################################################
 
 resu = f"{reset}{bright}{lightyellow}[{white}*{lightyellow}]{reset}"
