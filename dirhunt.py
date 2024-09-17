@@ -334,6 +334,7 @@ def main():
         paths = defpaths
 
     scan(args.url, paths, threads=args.threads, user_agent=args.user_agent, retries=args.retries, live=args.live)
+    input(w)
 ##############################################################
 
 
