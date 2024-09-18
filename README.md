@@ -15,11 +15,21 @@
 - Python 3.x
 - Required libraries: `requests`, `tqdm`, `colorama`
 
-You can install the required libraries using pip:
+To set up your environment, follow these steps:
 
-```bash
-pip install -r requirements.txt
-```
+1. **Run**
+  ```bash
+  setup.bat
+  ```
+  to initialize the necessary configuration.
+
+2. **Run**
+  ```bash
+  path.bat
+  ```
+  to add the directory to your system `PATH`.
+
+Make sure to run these files in the order listed to properly configure your environment.
 
 ## 🚀 Usage
 
