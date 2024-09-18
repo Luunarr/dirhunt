@@ -25,7 +25,9 @@ from urllib.parse import urljoin
 
 
 ##############################################################
+
 init(autoreset=True)
+
 ##############################################################
 
 
@@ -67,7 +69,7 @@ asciiart = [
 f"{bright}{white}   ___      _             _  _                     _    {reset}",
 f"{bright}{white}  |   \    (_)      _ _  | || |   _  _    _ _     | |_  {reset}",
 f"{bright}{white}  | |) |   | |     | '_| | __ |  | {cyan}+{white}| |  | ' \    |  _|   {ver}{reset}",
-f"{bright}{white}  |___/   _|_|_   _|_|_  |_||_|   \_,_|  |_||_|   _\__|   {cyan}https://github.com/Luunarr/dirhunt{reset}",
+f"{bright}{white}  |___/   _|_|_   _|_|_  |_||_|   \_,_|  |_||_|   _\__|   {white}https://github.com/Luunarr/dirhunt{reset}",
 f'{bright}{white}_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|{reset}',
 f"""{bright}{white}"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'{reset}""",
 f""
