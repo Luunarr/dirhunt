@@ -57,6 +57,7 @@ info = f"{reset}{bright}{cyan}[{white}?{cyan}]{reset}"
 inputt = f"{reset}{bright}{cyan}[{white}>{cyan}]{reset}"
 htag = f"{reset}{bright}{blue}[{white}#{blue}]{reset}"
 git = f"{reset}{bright}{gray}[{white}github{gray}]{reset}"
+ver = f"{reset}{bright}{white}[1.1#dirhunt]{reset}"
 
 ##############################################################
 
@@ -66,7 +67,7 @@ git = f"{reset}{bright}{gray}[{white}github{gray}]{reset}"
 asciiart = [
 f"{bright}{white}   ___      _             _  _                     _    {reset}",
 f"{bright}{white}  |   \    (_)      _ _  | || |   _  _    _ _     | |_  {reset}",
-f"{bright}{white}  | |) |   | |     | '_| | __ |  | +| |  | ' \    |  _| {reset}",
+f"{bright}{white}  | |) |   | |     | '_| | __ |  | +| |  | ' \    |  _| {ver}{reset}",
 f"{bright}{white}  |___/   _|_|_   _|_|_  |_||_|   \_,_|  |_||_|   _\__| {reset}",
 f'{bright}{white}_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|{reset}',
 f"""{bright}{white}"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'{reset}""",
