@@ -4,7 +4,6 @@
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 cd %USERPROFILE%
-echo %~dp0
 mkdir dirhuntpath
-echo python > dirhunt.bat
+echo python %~dp0 > dirhunt.bat
 
