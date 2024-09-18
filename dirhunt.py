@@ -68,7 +68,7 @@ asciiart = [
 f"{bright}{white}   ___      _             _  _                     _    {reset}",
 f"{bright}{white}  |   \    (_)      _ _  | || |   _  _    _ _     | |_  {reset}",
 f"{bright}{white}  | |) |   | |     | '_| | __ |  | +| |  | ' \    |  _|   {ver}{reset}",
-f"{bright}{white}  |___/   _|_|_   _|_|_  |_||_|   \_,_|  |_||_|   _\__|   {git} https://github.com/Luunarr/dirhunt{reset}",
+f"{bright}{white}  |___/   _|_|_   _|_|_  |_||_|   \_,_|  |_||_|   _\__|   https://github.com/Luunarr/dirhunt{reset}",
 f'{bright}{white}_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|{reset}',
 f"""{bright}{white}"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'{reset}""",
 f""
