@@ -91,7 +91,7 @@ python dirhunt.py http://example.com -p custom_paths.txt -t 20 --logfile results
 
 ## 👤 Author
 
-**[Lunar](https://github.com/Luunarr/dirhunt)**
+**[Lunar](https://github.com/Luunarr/dirhunt)**, **[dirhunt](https://github.com/Luunarr/dirhunt)**
 
 ## 📜 License
 
