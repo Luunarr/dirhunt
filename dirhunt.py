@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 
+# :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# :: dirhunt/setup.bat (https://github.com/Luunarr/dirhunt) :
+# :: by Lunar          (https://github.com/Luunarr)         :
+# :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
 ##############################################################
+
 import requests
 from urllib.parse import urljoin
 from concurrent.futures import ThreadPoolExecutor
@@ -8,9 +14,12 @@ import time
 import argparse
 import logging
 import socket
-from tqdm import tqdm
 import os
 from colorama import *
+from tqdm import tqdm
+
+
+
 ##############################################################
 
 
