@@ -8,4 +8,5 @@ pip install -r "requirements.txt"
 cls
 python dirhunt.py -h
 pause
+del setup.bat
 cmd
