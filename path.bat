@@ -5,6 +5,7 @@
 
 echo python %~dp0\dirhunt.py > dirhunt.bat
 setx /M path "%path%;%~dp0"
+cls
 del path.bat
+cls
 pause
-
