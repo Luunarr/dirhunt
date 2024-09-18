@@ -3,7 +3,5 @@
 :: by Lunar          (https://github.com/Luunarr)         ::
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-cd %USERPROFILE%
-mkdir dirhuntpath
-echo python %~dp0 > dirhunt.bat
+echo python %~dp0\dirhunt.py > dirhunt.bat
 
