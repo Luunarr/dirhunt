@@ -67,7 +67,7 @@ ver = f"{reset}{bright}{white}[1.1#dirhunt]{reset}"
 asciiart = [
 f"{bright}{white}   ___      _             _  _                     _    {reset}",
 f"{bright}{white}  |   \    (_)      _ _  | || |   _  _    _ _     | |_  {reset}",
-f"{bright}{white}  | |) |   | |     | '_| | __ |  | +| |  | ' \    |  _| {ver}{reset}",
+f"{bright}{white}  | |) |   | |     | '_| | __ |  | +| |  | ' \    |  _|   {ver}{reset}",
 f"{bright}{white}  |___/   _|_|_   _|_|_  |_||_|   \_,_|  |_||_|   _\__| {reset}",
 f'{bright}{white}_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|{reset}',
 f"""{bright}{white}"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'{reset}""",
