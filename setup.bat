@@ -1,7 +1,7 @@
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-:: dirhunt/setup.bat (https://github.com/Luunarr/dirhunt)  :
-:: by Lunar          (https://github.com/Luunarr)          :
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: dirhunt/setup.bat (https://github.com/Luunarr/dirhunt) :
+:: by Lunar          (https://github.com/Luunarr)         :
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 @echo off
 pip install -r "requirements.txt"
