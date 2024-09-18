@@ -2,7 +2,7 @@
 
 **A powerful tool to efficiently scan directories of a specified URL. This script allows you to identify directories and files by sending HTTP requests and checking responses.**
 
-## 🔧 Features
+## `🔧` Features
 
 - **`🕒` Concurrent Scanning:** Uses multiple threads to quickly scan directories.
 - **`🔄` Customizable Paths:** Supports both default and custom path lists for scanning.
@@ -10,7 +10,7 @@
 - **`🔴` Live Mode:** Displays discovered URLs in real-time.
 - **`🎨` Colored Output:** Provides color-coded output for better readability.
 
-## 📋 Prerequisites
+## `📋` Prerequisites
 
 - Python 3.x
 - Required libraries: `requests`, `tqdm`, `colorama`
