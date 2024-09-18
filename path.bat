@@ -4,8 +4,11 @@
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 @echo off
-echo @echo off > dirhunt.bat
-echo python "%~dp0\dirhunt.py" %%* >> dirhunt.bat
-setx /M path "%PATH%;%~dp0"
+set "SCRIPT_DIR=%~dp0Scripts"
+if not exist "%SCRIPT_DIR%" mkdir "%SCRIPT_DIR%"
+echo @echo off > "%SCRIPT_DIR%\dirhunt.bat"
+echo python "%~dp0\dirhunt.py" %%* >> "%SCRIPT_DIR%\dirhunt.bat"
+move "%~f0" "%SCRIPT_DIR%\"
+setx /M path "%PATH%;%SCRIPT_DIR%"
 cls
 pause
