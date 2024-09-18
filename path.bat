@@ -4,5 +4,5 @@
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 cd %USERPROFILE%
-mkdir dirhuntpath.bat
+mkdir dirhuntpath
 
