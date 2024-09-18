@@ -5,7 +5,7 @@
 
 @echo off
 (echo @echo off ^& echo python "%~dp0\dirhunt.py") > dirhunt.bat
-set path "%path%;%~dp0"
+setx path "%path%;%~dp0"
 cls
 del path.bat
 cls
