@@ -4,11 +4,11 @@
 
 ## 🔧 Features
 
-- **🕒 Concurrent Scanning:** Uses multiple threads to quickly scan directories.
-- **🔄 Customizable Paths:** Supports both default and custom path lists for scanning.
-- **📝 Logging:** Records scan results and errors to a specified file.
-- **🔴 Live Mode:** Displays discovered URLs in real-time.
-- **🎨 Colored Output:** Provides color-coded output for better readability.
+- **`🕒` Concurrent Scanning:** Uses multiple threads to quickly scan directories.
+- **`🔄` Customizable Paths:** Supports both default and custom path lists for scanning.
+- **`📝` Logging:** Records scan results and errors to a specified file.
+- **`🔴` Live Mode:** Displays discovered URLs in real-time.
+- **`🎨` Colored Output:** Provides color-coded output for better readability.
 
 ## 📋 Prerequisites
 
@@ -31,7 +31,7 @@ To set up your environment, follow these steps:
 
 Make sure to run these files in the order listed to properly configure your environment.
 
-## 🚀 Usage
+## `🚀` Usage
 
 ### Basic Usage
 
@@ -91,7 +91,7 @@ python dirhunt.py http://example.com
   python dirhunt.py http://example.com --live
   ```
 
-## 💡 Example
+## `💡` Example
 
 To perform a scan on `http://example.com` using a custom path list with 20 threads, log results to `results.log`, and display results in real-time, you can use:
 
@@ -99,14 +99,14 @@ To perform a scan on `http://example.com` using a custom path list with 20 threa
 python dirhunt.py http://example.com -p custom_paths.txt -t 20 --logfile results.log --live
 ```
 
-## 👤 Author
+## `👤` Author
 
 **[Lunar](https://github.com/Luunarr/dirhunt)**
 
-## 📜 License
+## `📜` License
 
 **This script is licensed under the [MIT License](LICENSE).**
 
-## 🎀 SecLists
+## `🎀` SecLists
 
 **[SecLists](https://github.com/danielmiessler/SecLists)**
