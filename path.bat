@@ -5,4 +5,5 @@
 
 cd %USERPROFILE%
 mkdir dirhuntpath
+echo python > dirhunt.bat
 
