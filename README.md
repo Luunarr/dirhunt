@@ -1,4 +1,4 @@
-# 📂 Dirhunt
+# 📂 **[DirHunt](https://github.com/Luunarr/dirhunt)**
 
 **A powerful tool to efficiently scan directories of a specified URL. This script allows you to identify directories and files by sending HTTP requests and checking responses.**
 
