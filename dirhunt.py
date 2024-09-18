@@ -8,17 +8,18 @@
 ##############################################################
 
 import requests
-from urllib.parse import urljoin
-from concurrent.futures import ThreadPoolExecutor
 import time
 import argparse
 import logging
 import socket
 import os
+
+##############################################################
+
 from colorama import *
 from tqdm import tqdm
-
-
+from concurrent.futures import ThreadPoolExecutor
+from urllib.parse import urljoin
 
 ##############################################################
 
