@@ -57,7 +57,7 @@ plus = f"{reset}{bright}{green}[{white}+{green}]{reset}"
 excla = f"{reset}{bright}{red}[{white}!{red}]{reset}"
 info = f"{reset}{bright}{cyan}[{white}?{cyan}]{reset}"
 inputt = f"{reset}{bright}{cyan}[{white}>{cyan}]{reset}"
-htag = f"{reset}{bright}{blue}[{white}#{blue}]{reset}"
+s = f"{reset}{bright}{blue}[{white}/{blue}]{reset}"
 ver = f"{reset}{bright}{lightyellow}[{white}dirhunt{gray}#{white}1.2{lightyellow}]{reset}"
 l = f"{reset}{bright}======================================================={reset}"
 
@@ -220,7 +220,7 @@ def scan(url, paths, threads=10, color=True, user_agent=None, retries=3, live=Fa
         futures = {executor.submit(cpath, path): path for path in paths}
 
         if live:
-            print(f"\n{l}\n{htag} {bright}{white}Discovered URLs:{reset}")
+            print(f"\n{l}\n{s} {bright}{white}Discovered URLs:{reset}")
             for future in futures:
                 result = future.result()
                 if result:
@@ -238,7 +238,7 @@ def scan(url, paths, threads=10, color=True, user_agent=None, retries=3, live=Fa
     urlspersec = len(paths) / ttime if ttime > 0 else 0
 
     if not live: 
-        print(f"\n{l}\n{htag} {bright}{white}Discovered URLs:{reset}")
+        print(f"\n{l}\n{s} {bright}{white}Discovered URLs:{reset}")
         for result in results:
             print(f"{plus} {bright}{white}{result[0]} ")
             logging.info(f"Discovered URL: {result[0]}")
