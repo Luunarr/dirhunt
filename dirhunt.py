@@ -66,10 +66,10 @@ ver = f"{reset}{bright}{lightyellow}[{white}dirhunt{gray}#{white}1.2{lightyellow
 ##############################################################
 
 asciiart = [
-f"{bright}{white}   ___      _             _  _                     _    {reset}",
-f"{bright}{white}  |   \    (_)      _ _  | || |   _  _    _ _     | |_  {reset}",
-f"{bright}{white}  | |) |   | |     | '_| | __ |  | {cyan}+{white}| |  | ' \    |  _|   {ver}{reset}",
-f"{bright}{white}  |___/   _|_|_   _|_|_  |_||_|   \_,_|  |_||_|   _\__|   {white}https://github.com/Luunarr/dirhunt{reset}",
+f"{bright}   {cyan}___{white}      _             {cyan}_  _{white}                     _    {reset}",
+f"{bright}  {cyan}|   \ {white}   (_)      _ _  {cyan}| || |{white}   _  _    _ _     | |_  {reset}",
+f"{bright}  {cyan}| |) |{white}   | |     | '_| {cyan}| __ |{white}  | {cyan}+{white}| |  | ' \    |  _|   {ver}{reset}",
+f"{bright}  {cyan}|___/{white}   _|_|_   _|_|_  {cyan}|_||_|{white}   \_,_|  |_||_|   _\__|   {white}https://github.com/Luunarr/dirhunt{reset}",
 f'{bright}{white}_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|{reset}',
 f"""{bright}{white}"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'{reset}""",
 f""
