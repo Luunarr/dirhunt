@@ -149,23 +149,6 @@ defpaths = [
 
 ##############################################################
 
-class ColoredHelpFormatter(argparse.RawTextHelpFormatter):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-
-    def start_section(self, heading):
-        hcolor = f"{bright}{yellow}{heading}{reset}"
-        super().start_section(hcolor)
-
-    def _format_action_invocation(self, action):
-        parts = super()._format_action_invocation(action)
-        return f"{gray}{parts}{reset}"
-        
-##############################################################
-
-
-##############################################################
-
 def slogging(logfile):
     script = os.path.dirname(os.path.abspath(__file__))
     logfilep = os.path.join(script, logfile)
@@ -280,63 +263,62 @@ def clear():
 def main():
     parser = argparse.ArgumentParser(
         description=f"\n{info} {bright}{yellow}Powerful Directory Scanner - A tool to scan directories efficiently{reset}",
-        formatter_class=ColoredHelpFormatter
     )
 
     parser.add_argument(
         "url", 
-        help=f"{bright}{yellow}The base URL to scan. Example: {white}http://example.com{reset}"
+        help=f"The base URL to scan. Example: {white}http://example.com{reset}"
     )
 
     parser.add_argument(
         "-p", "--paths", 
-        help=f"{bright}{yellow}Path to a custom file that contains a list of paths to test.{reset}",
+        help=f"Path to a custom file that contains a list of paths to test.{reset}",
         type=str
     )
 
     parser.add_argument(
         "-t", "--threads", 
-        help=f"{bright}{yellow}Number of threads to use for scanning. Default is {white}10{yellow}.{reset}",
+        help=f"Number of threads to use for scanning. Default is {white}10.{reset}",
         type=int, 
         default=10
     )
 
     parser.add_argument(
         "-m", "--mode", 
-        help=f"{bright}{yellow}Specify the scan mode. Choose between {white}'default'{yellow} or {white}'custom'{yellow}.{reset}", 
+        help=f"Specify the scan mode. Choose between {white}'default'{reset} or {white}'custom'{yellow}.{reset}", 
         choices=['default', 'custom'], 
         default='default'
     )
 
     parser.add_argument(
         "--clear", 
-        help=f"{bright}{yellow}Clear the screen before displaying the scan results.{reset}", 
+        help=f"Clear the screen before displaying the scan results.{reset}", 
         action="store_true"
     )
 
     parser.add_argument(
         "--user-agent", 
-        help=f"{bright}{yellow}Specify a custom {white}User-Agent{yellow} header for requests.{reset}", 
+        help=f"Specify a custom {white}User-Agent{reset} header for requests.{reset}", 
         type=str
     )
 
     parser.add_argument(
         "--retries", 
-        help=f"{bright}{yellow}Number of retry attempts for failed requests. Default is {white}3{yellow}.{reset}",
+        help=f"Number of retry attempts for failed requests. Default is {white}3{reset}.{reset}",
         type=int, 
         default=3
     )
 
     parser.add_argument(
         "--logfile", 
-        help=f"{bright}{yellow}File to log the scan results. Default is {white}scan.log{yellow}.{reset}", 
+        help=f"File to log the scan results. Default is {white}scan.log{reset}.{reset}", 
         type=str, 
         default='scan.log'
     )
 
     parser.add_argument(
         "--live", 
-        help=f"{bright}{yellow}Enable live mode to display valid URLs as they are found.{reset}", 
+        help=f"Enable live mode to display valid URLs as they are found.{reset}", 
         action="store_true"
     )
 
