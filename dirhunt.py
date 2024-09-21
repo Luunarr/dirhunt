@@ -59,6 +59,7 @@ info = f"{reset}{bright}{cyan}[{white}?{cyan}]{reset}"
 inputt = f"{reset}{bright}{cyan}[{white}>{cyan}]{reset}"
 htag = f"{reset}{bright}{blue}[{white}#{blue}]{reset}"
 ver = f"{reset}{bright}{lightyellow}[{white}dirhunt{gray}#{white}1.2{lightyellow}]{reset}"
+l = f"{reset}{bright}======================================================={reset}"
 
 ##############################################################
 
@@ -144,6 +145,8 @@ defpaths = [
     'uploads/archive/', 'uploads/cache/', 'uploads/data/', 'uploads/private/'
 ]
 
+
+
 ##############################################################
 
 
@@ -164,7 +167,9 @@ def slogging(logfile):
 def scan(url, paths, threads=10, color=True, user_agent=None, retries=3, live=False):
 
     domain = url.split("//")[-1].split("/")[0]
-
+    
+    print(l)
+    
     try:
         ip = socket.gethostbyname(domain)
         print(f"{resu} {bright}{white}Domain: {domain} | IP Address: {ip}{reset}")
@@ -180,6 +185,9 @@ def scan(url, paths, threads=10, color=True, user_agent=None, retries=3, live=Fa
         headers = {}
 
     print(f"{resu} {bright}{white}Starting directory scan on URL: {url}{reset}")
+    
+    print(l + "\n")
+    
     logging.info(f"Starting directory scan on URL: {url}")
 
     statuscounts = {}
@@ -212,7 +220,7 @@ def scan(url, paths, threads=10, color=True, user_agent=None, retries=3, live=Fa
         futures = {executor.submit(cpath, path): path for path in paths}
 
         if live:
-            print(f"\n{htag} {bright}{white}Discovered URLs:{reset}")
+            print(f"\n{l}\n{htag} {bright}{white}Discovered URLs:{reset}")
             for future in futures:
                 result = future.result()
                 if result:
@@ -230,19 +238,19 @@ def scan(url, paths, threads=10, color=True, user_agent=None, retries=3, live=Fa
     urlspersec = len(paths) / ttime if ttime > 0 else 0
 
     if not live: 
-        print(f"\n{htag} {bright}{white}Discovered URLs:{reset}")
+        print(f"\n{l}\n{htag} {bright}{white}Discovered URLs:{reset}")
         for result in results:
             print(f"{plus} {bright}{white}{result[0]} ")
             logging.info(f"Discovered URL: {result[0]}")
 
-    print(f"\n{resu} {bright}{white}Scan completed in {ttime:.2f} seconds.{reset}")
+    print(f"\n{l}\n{resu} {bright}{white}Scan completed in {ttime:.2f} seconds.{reset}")
     print(f"{resu} {bright}{white}URLs tested per second: {urlspersec:.2f}{reset}")
     print(f"{resu} {bright}{white}Total URLs found: {len(results)}{reset}\n")
 
-    print(f"{resu} {bright}{white}HTTP status codes summary:{reset}")
+    print(f"{l}\n{resu} {bright}{white}HTTP status codes summary:{reset}")
     for code, count in sorted(statuscounts.items(), key=lambda item: item[1], reverse=True):
         print(f"{plus} {bright}{white}Status Code {code}: {count} times{reset}") 
-    print()
+    print(l)
     
 ##############################################################
 
@@ -262,7 +270,7 @@ def clear():
 
 def main():
     parser = argparse.ArgumentParser(
-        description=f"\n{info} {bright}{yellow}Powerful Directory Scanner - A tool to scan directories efficiently{reset}",
+        description=f"{info} {bright}Powerful Directory Scanner - A tool to scan directories{reset}",
     )
 
     parser.add_argument(
