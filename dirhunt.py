@@ -5,7 +5,7 @@
 # :: by Lunar           (https://github.com/Luunarr)         ::
 # :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-##############################################################
+# ~ :::::::::::::::::::::::::::::: https://github.com/Luunarr/dirhunt :::::::::::::::::::::::::::::: ~ #
 
 import requests
 import time
@@ -14,24 +14,24 @@ import logging
 import socket
 import os
 
-##############################################################
+# ~ :::::::::::::::::::::::::::::: https://github.com/Luunarr/dirhunt :::::::::::::::::::::::::::::: ~ #
 
 from colorama import *
 from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor
 from urllib.parse import urljoin
 
-##############################################################
+# ~ :::::::::::::::::::::::::::::: https://github.com/Luunarr/dirhunt :::::::::::::::::::::::::::::: ~ #
 
 
-##############################################################
+# ~ :::::::::::::::::::::::::::::: https://github.com/Luunarr/dirhunt :::::::::::::::::::::::::::::: ~ #
 
 init(autoreset=True)
 
-##############################################################
+# ~ :::::::::::::::::::::::::::::: https://github.com/Luunarr/dirhunt :::::::::::::::::::::::::::::: ~ #
 
 
-##############################################################
+# ~ :::::::::::::::::::::::::::::: https://github.com/Luunarr/dirhunt :::::::::::::::::::::::::::::: ~ #
 
 black = Fore.BLACK
 red = Fore.RED
@@ -44,12 +44,12 @@ white = Fore.WHITE
 gray = Fore.LIGHTBLACK_EX
 lightyellow = Fore.LIGHTYELLOW_EX
 
-##############################################################
+# ~ :::::::::::::::::::::::::::::: https://github.com/Luunarr/dirhunt :::::::::::::::::::::::::::::: ~ #
 
 reset = Style.RESET_ALL
 bright = Style.BRIGHT
 
-##############################################################
+# ~ :::::::::::::::::::::::::::::: https://github.com/Luunarr/dirhunt :::::::::::::::::::::::::::::: ~ #
 
 resu = f"{reset}{bright}{lightyellow}[{white}*{lightyellow}]{reset}"
 tilde = f"{reset}{bright}{yellow}[{white}~{yellow}]{reset}"
@@ -58,28 +58,27 @@ excla = f"{reset}{bright}{red}[{white}!{red}]{reset}"
 info = f"{reset}{bright}{cyan}[{white}?{cyan}]{reset}"
 inputt = f"{reset}{bright}{cyan}[{white}>{cyan}]{reset}"
 s = f"{reset}{bright}{blue}[{white}/{blue}]{reset}"
-ver = f"{reset}{bright}{lightyellow}[{white}dirhunt{gray}#{white}1.2{lightyellow}]{reset}"
-l = f"{reset}{bright}======================================================={reset}"
+ver = f"{reset}{bright}{red}[{white}dirhunt{gray}#{white}1.3{red}]{reset}"
 
-##############################################################
+# ~ :::::::::::::::::::::::::::::: https://github.com/Luunarr/dirhunt :::::::::::::::::::::::::::::: ~ #
 
 
-##############################################################
+# ~ :::::::::::::::::::::::::::::: https://github.com/Luunarr/dirhunt :::::::::::::::::::::::::::::: ~ #
 
 asciiart = [
-f"{bright}   {cyan}___{white}      _             {cyan}_  _{white}                     _    {reset}",
-f"{bright}  {cyan}|   \ {white}   (_)      _ _  {cyan}| || |{white}   _  _    _ _     | |_  {reset}",
-f"{bright}  {cyan}| |) |{white}   | |     | '_| {cyan}| __ |{white}  | {cyan}+{white}| |  | ' \    |  _|   {ver}{reset}",
-f"{bright}  {cyan}|___/{white}   _|_|_   _|_|_  {cyan}|_||_|{white}   \_,_|  |_||_|   _\__|   {white}https://github.com/Luunarr/dirhunt{reset}",
+f"{bright}   {red}___{white}      _             {red}_  _{white}                     _    {reset}",
+f"{bright}  {red}|   \ {white}   (_)      _ _  {red}| || |{white}   _  _    _ _     | |_  {reset}",
+f"{bright}  {red}| |) |{white}   | |     | '_| {red}| __ |{white}  | {red}+{white}| |  | ' \    |  _|   {ver}{reset}",
+f"{bright}  {red}|___/{white}   _|_|_   _|_|_  {red}|_||_|{white}   \_,_|  |_||_|   _\__|   {white}https://github.com/Luunarr/dirhunt{reset}",
 f'{bright}{white}_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|{reset}',
 f"""{bright}{white}"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'{reset}""",
 f""
 ]
 
-##############################################################
+# ~ :::::::::::::::::::::::::::::: https://github.com/Luunarr/dirhunt :::::::::::::::::::::::::::::: ~ #
 
 
-##############################################################
+# ~ :::::::::::::::::::::::::::::: https://github.com/Luunarr/dirhunt :::::::::::::::::::::::::::::: ~ #
 
 defpaths = [
     'admin/', 'login/', 'dashboard/', 'config/', 'db/', 'backup/',
@@ -147,10 +146,10 @@ defpaths = [
 
 
 
-##############################################################
+# ~ :::::::::::::::::::::::::::::: https://github.com/Luunarr/dirhunt :::::::::::::::::::::::::::::: ~ #
 
 
-##############################################################
+# ~ :::::::::::::::::::::::::::::: https://github.com/Luunarr/dirhunt :::::::::::::::::::::::::::::: ~ #
 
 def slogging(logfile):
     script = os.path.dirname(os.path.abspath(__file__))
@@ -159,16 +158,14 @@ def slogging(logfile):
                         format='%(asctime)s - %(levelname)s - %(message)s')
     logging.info("Logging started")
     
-##############################################################
+# ~ :::::::::::::::::::::::::::::: https://github.com/Luunarr/dirhunt :::::::::::::::::::::::::::::: ~ #
 
 
-##############################################################
+# ~ :::::::::::::::::::::::::::::: https://github.com/Luunarr/dirhunt :::::::::::::::::::::::::::::: ~ #
 
 def scan(url, paths, threads=10, color=True, user_agent=None, retries=3, live=False):
 
     domain = url.split("//")[-1].split("/")[0]
-    
-    print(l)
     
     try:
         ip = socket.gethostbyname(domain)
@@ -186,7 +183,6 @@ def scan(url, paths, threads=10, color=True, user_agent=None, retries=3, live=Fa
 
     print(f"{resu} {bright}{white}Starting directory scan on URL: {url}{reset}")
     
-    print(l + "\n")
     
     logging.info(f"Starting directory scan on URL: {url}")
 
@@ -220,7 +216,7 @@ def scan(url, paths, threads=10, color=True, user_agent=None, retries=3, live=Fa
         futures = {executor.submit(cpath, path): path for path in paths}
 
         if live:
-            print(f"\n{l}\n{s} {bright}{white}Discovered URLs:{reset}")
+            print(f"\n{s} {bright}{white}Discovered URLs:{reset}")
             for future in futures:
                 result = future.result()
                 if result:
@@ -238,24 +234,23 @@ def scan(url, paths, threads=10, color=True, user_agent=None, retries=3, live=Fa
     urlspersec = len(paths) / ttime if ttime > 0 else 0
 
     if not live: 
-        print(f"\n{l}\n{s} {bright}{white}Discovered URLs:{reset}")
+        print(f"\n{s} {bright}{white}Discovered URLs:{reset}")
         for result in results:
             print(f"{plus} {bright}{white}{result[0]} ")
             logging.info(f"Discovered URL: {result[0]}")
 
-    print(f"\n{l}\n{resu} {bright}{white}Scan completed in {ttime:.2f} seconds.{reset}")
+    print(f"\n{resu} {bright}{white}Scan completed in {ttime:.2f} seconds.{reset}")
     print(f"{resu} {bright}{white}URLs tested per second: {urlspersec:.2f}{reset}")
     print(f"{resu} {bright}{white}Total URLs found: {len(results)}{reset}\n")
 
-    print(f"{l}\n{resu} {bright}{white}HTTP status codes summary:{reset}")
+    print(f"{resu} {bright}{white}HTTP status codes summary:{reset}")
     for code, count in sorted(statuscounts.items(), key=lambda item: item[1], reverse=True):
         print(f"{plus} {bright}{white}Status Code {code}: {count} times{reset}") 
-    print(l)
     
-##############################################################
+# ~ :::::::::::::::::::::::::::::: https://github.com/Luunarr/dirhunt :::::::::::::::::::::::::::::: ~ #
 
 
-##############################################################
+# ~ :::::::::::::::::::::::::::::: https://github.com/Luunarr/dirhunt :::::::::::::::::::::::::::::: ~ #
 
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -263,10 +258,10 @@ def clear():
         print(line)
         time.sleep(0.02)
         
-##############################################################
+# ~ :::::::::::::::::::::::::::::: https://github.com/Luunarr/dirhunt :::::::::::::::::::::::::::::: ~ #
 
 
-##############################################################
+# ~ :::::::::::::::::::::::::::::: https://github.com/Luunarr/dirhunt :::::::::::::::::::::::::::::: ~ #
 
 def main():
     parser = argparse.ArgumentParser(
@@ -353,12 +348,12 @@ def main():
 
     scan(args.url, paths, threads=args.threads, user_agent=args.user_agent, retries=args.retries, live=args.live)
     
-##############################################################
+# ~ :::::::::::::::::::::::::::::: https://github.com/Luunarr/dirhunt :::::::::::::::::::::::::::::: ~ #
 
 
-##############################################################
+# ~ :::::::::::::::::::::::::::::: https://github.com/Luunarr/dirhunt :::::::::::::::::::::::::::::: ~ #
 
 if __name__ == "__main__":
     main()
     
-##############################################################
+# ~ :::::::::::::::::::::::::::::: https://github.com/Luunarr/dirhunt :::::::::::::::::::::::::::::: ~ #
